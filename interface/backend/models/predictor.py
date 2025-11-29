@@ -42,7 +42,7 @@ def prepare_input(room_count, bathroom_count, size, location, category, transact
     # Normaliser les inputs (case-insensitive pour les villes)
     location_normalized = location.strip()
     if location_normalized.lower() not in [v.lower() for v in VILLES]:
-        location_normalized = 'Tunis'  # Ville par défaut
+        location_normalized = 'tunis'  # Ville par défaut
     
     if category not in CATEGORIES:
         category = 'Appartements'  # Catégorie par défaut

@@ -60,7 +60,7 @@ const tunisianCities = [
   "sidi bouzid",
   "siliana",
   "tataouine",
-].map((city) => city.charAt(0).toUpperCase() + city.slice(1));
+]
 
 const categories = [
   "Appartements",
@@ -247,7 +247,7 @@ export default function PredictionForm({
                 <SelectContent className="max-h-60">
                   {tunisianCities.map((city) => (
                     <SelectItem key={city} value={city}>
-                      {city}
+                      {city.charAt(0).toUpperCase() + city.slice(1)}
                     </SelectItem>
                   ))}
                 </SelectContent>

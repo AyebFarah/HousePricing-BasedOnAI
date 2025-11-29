@@ -24,7 +24,7 @@ def engineer_features(data, location, premium_locations):
     data['size_x_bathrooms'] = data['size'] * data['bathroom_count']
     
     # Premium location indicator (liste prédéfinie)
-    data['is_premium_location'] = (location in premium_locations).astype(int)
+    data['is_premium_location'] = int(location in premium_locations)
     
     # Luxury score (SANS LEAKAGE - basé uniquement sur features disponibles)
     data['luxury_score'] = (
