@@ -1,0 +1,48 @@
+### Test Health Check
+GET http://localhost:5000/health
+Content-Type: application/json
+
+###
+
+### Test Prediction - Appartement à Louer à Tunis
+POST http://localhost:5000/predict
+Content-Type: application/json
+
+{
+  "room_count": 3,
+  "bathroom_count": 2,
+  "size": 120,
+  "location": "tunis",
+  "category": "Appartements",
+  "type": "À Louer"
+}
+
+###
+
+### Test Prediction - Villa à Vendre à Sousse
+POST http://localhost:5000/predict
+Content-Type: application/json
+
+{
+  "room_count": 5,
+  "bathroom_count": 3,
+  "size": 300,
+  "location": "sousse",
+  "category": "Maisons et Villas",
+  "type": "À Vendre"
+}
+
+###
+
+### Test Prediction - Studio à Louer à Médenine
+POST http://localhost:5000/predict
+Content-Type: application/json
+
+{
+  "room_count": 1,
+  "bathroom_count": 1,
+  "size": 35,
+  "location": "médenine",
+  "category": "Appartements",
+  "type": "À Louer"
+}
